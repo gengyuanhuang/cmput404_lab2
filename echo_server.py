@@ -1,5 +1,5 @@
 """
-CMPUT404 Winter 2021 Lab 1
+CMPUT404 Winter 2021 Lab 2
 Gengyuan Huang
 
 echo_server.py is provided on CMPUT404 eclass not written by me.

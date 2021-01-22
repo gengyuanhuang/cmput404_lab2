@@ -1,5 +1,5 @@
 """
-CMPUT404 Winter 2021 Lab 1
+CMPUT404 Winter 2021 Lab 2
 Gengyuan Huang
 
 a simple proxy server app for proxy_client.py
@@ -107,14 +107,14 @@ def main():
         socket = init_listen_socket(CLIENT_ADDR)
         # server will continue run forever untill interrupt
         while True:
-            client_socket, client_addr = socket.accept()
+            client_socket, client_addr = socket.accept()            # wait for connection
             p = Process(target=handle_client, args=(client_socket, client_addr,))
-            p.daemon = True
+            p.daemon = True                                         # prevent zombies
             p.start()
     except:
         # for simplicity of this assignment
         # very limited error checking
-        log("Error")
+        log("Error, or user interrupt")
 
     finally:
         close_socket(socket)

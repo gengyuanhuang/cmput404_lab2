@@ -1,5 +1,5 @@
 """
-CMPUT404 Winter 2021 Lab 1
+CMPUT404 Winter 2021 Lab 2
 Gengyuan Huang
 
 a simple client app for procy_server.py
@@ -56,7 +56,7 @@ def main():
         data = recv_alldata(socket)
         
         # print data
-        # print(data)
+        print(data)
 
         # program normal termination
         close_socket(socket)
